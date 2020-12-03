@@ -2,16 +2,26 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Demo />
+    <Demo2/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import { VuePlugin } from 'vuera'
+import Demo from "./components/react/Demo"
+import Demo2 from "./components/react/Demo2"
+import Vue from "vue"
+
+Vue.use(VuePlugin)
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Demo,
+    Demo2
   }
 }
 </script>
